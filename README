@@ -1,0 +1,66 @@
+Uses Twisted ( http://twistedmatrix.com )
+Should be platform independent.
+
+Running:
+python PyRCDicebot.py [server] [name] [channel 1] ...
+
+Versions:
+PyRCDicebot v0.1.0 - Initial version
+PyRCDicebot v0.1.1 - Seperate individual rolls
+PyRCDicebot v0.1.2 - Error handling(rough)
+PyRCDicebot v0.2.0 - Multiline output(rough) & roll comments. First public release
+PyRCDicebot v0.2.1 - Channel Announcements introduced, with formatting. Preloaded with !begin, !pause, & !end
+PyRCDicebot v0.3.0 - Major release. Main dicerolling refactored, !nwod New World of Darkness introduced, !owod Old World of Darkness introduced, verbose flag, sort flag, keep flag, exploding dice, brutal dice, target number dice, failure margin dice.
+PyRCDicebot v0.3.1 - Bugfix release, array flag, and !xia Legends of Wulin mode introduced.
+PyRCDicebot v0.3.2 - Titanium Panoply alpha, multiple set support
+PyRCDicebot v0.3.3 - Fixed exploding dice not exploding, added sort and verbose modes for !nwod.
+PyRCDicebot v0.4.0 - Switched to Twisted
+
+Usage:
+!roll:
+    XdY
+    XdY+Z
+    XdY-Z
+    Z*XdY
+   sXdY     - Sort (Low to High) (implies verbose)
+   vXdY     - Verbose (Describe each roll)
+   aXdY     - Array (skip printing grand total)
+    XdYeZ   - Explode (Reroll Z or higher)
+    XdYbZ   - Brutal  (Reroll Z or lower)
+    XdYtZ   - Target Z or higher
+    XdYfZ   - Fail on Z or lower
+    XdYkZ   - Keep Z highest
+    XdY+AdB - Multiple Dice
+!nwod:
+    X         - X d10s, rerolling 10s
+    XeY     - X d10s, rerolling Y dice. 0 to reroll none.
+    vX(eY)  - Verbose mode
+    sX(eY)  - Sort mode (implies verbose
+!owod:
+    XtY     - X d10s, with a target threshold of Y, subtracting ones and highlighting botches.
+!xia:
+    X       - X d10s, grouped together and sorted by width.
+!tp:
+    XpYmZ   - X+Y+Z d6s, separated into X panic dice, Y min-2 dice, & Z normal dice, sorted internally
+
+Copyright (c) 2010 David Ross
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, and/or distribute
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+I am not the owner of World of Darkness, nor any associated products. White Wolf and CCP own them.
+I am also not the owner of Legends of the Wulin. EOS Press owns that.
